@@ -1,0 +1,68 @@
+.container{
+    padding-top: 3%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    color: #fff;
+    border-radius: 5%;
+}
+.text{
+  margin: 4%;
+  text-align: center;
+}
+.floating-card{
+  width: 300px;
+  margin: 8px;
+}
+.floating-card-content {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border-radius: 16px;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.floating-card-content:hover {
+  transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.floating-card-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  transform: translateZ(15px);
+}
+
+.floating-card-content p {
+  font-size: 16px;
+  opacity: 0.9;
+  transform: translateZ(10px);
+}
+.floating-card-content a{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px solid wheat;
+  border-radius: 5%;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .floating-card-content {
+    background: linear-gradient(135deg, #8a3eff, #3a7bd5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .floating-card-content:hover {
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.4),
+      0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
