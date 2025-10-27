@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../index.html" class="custom-link">← Back</a>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Quiz App</h1>
+        <div class="meta">Simple JavaScript quiz — বাংলা UI</div>
+      </div>
+      <div class="meta">Score: <span id="score">0</span> / <span id="total">0</span></div>
+    </header>
+
+    <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+    <main class="card" id="quizCard">
+      <div id="questionArea">
+        <div class="question" id="questionText">লোড হচ্ছে...</div>
+        <div class="meta timer" id="timerText">Time: <span id="timeLeft">--</span>s</div>
+
+        <div class="choices" id="choicesContainer"></div>
+
+        <div class="controls">
+          <div class="left-controls">
+            <button id="prevBtn" class="ghost small">Prev</button>
+            <button id="nextBtn" class="small">Next</button>
+            <button id="submitBtn" class="ghost small">Submit</button>
+          </div>
+          <div>
+            <button id="resetBtn" class="ghost small">Restart</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="resultArea" class="hidden">
+        <div class="result">
+          <h2 id="resultTitle">You scored X</h2>
+          <p id="resultDetails"></p>
+          <button id="tryAgainBtn">Try Again</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>Quiz App</footer>
+  </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
