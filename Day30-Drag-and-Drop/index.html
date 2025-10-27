@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag And Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../index.html" class="custom-link">← Back</a>
+     <main class="container">
+    <h1>Drag & Drop Example</h1>
+
+    <section id="palette" class="panel" aria-label="Source list">
+      <h2>Source List (Drag from here)</h2>
+      <div class="items">
+        <div class="item" draggable="true" data-item="Apple">🍎 Apple</div>
+        <div class="item" draggable="true" data-item="Banana">🍌 Banana</div>
+        <div class="item" draggable="true" data-item="Cherry">🍒 Cherry</div>
+      </div>
+      <p class="hint">Drag an item from here and drop it into the “Drop Area” below.</p>
+    </section>
+
+    <section id="dropzone" class="panel dropzone" aria-label="Drop area">
+      <h2>Drop Area (Drop here)</h2>
+      <div class="dropped-list" aria-live="polite"></div>
+      <p class="hint">Items dropped here will appear below.  
+      Drag them back to the Source List to remove them.</p>
+    </section>
+  </main>
+
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
