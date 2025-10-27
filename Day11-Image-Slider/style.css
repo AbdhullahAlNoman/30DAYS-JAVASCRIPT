@@ -1,0 +1,25 @@
+.container {
+      text-align: center;
+      font-family: sans-serif;
+      background: #f4f4f4;
+    }
+    #slider {
+      width: 500px;
+      margin: 50px auto;
+      position: relative;
+    }
+    #slider img {
+      width: 500px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
