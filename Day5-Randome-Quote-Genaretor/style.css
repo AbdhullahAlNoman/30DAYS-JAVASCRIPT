@@ -1,0 +1,32 @@
+.container {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f2f2f2;
+    }
+
+    #quote-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+
+    #quote {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
