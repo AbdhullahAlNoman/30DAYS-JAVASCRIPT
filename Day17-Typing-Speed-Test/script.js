@@ -2,7 +2,7 @@
     const TEXTS = [
       "The quick brown fox jumps over the lazy dog.",
       "Type fast but type accurate. Practice daily to improve.",
-      "জাভাস্ক্রিপ্ট দিয়ে মজা করে কিছু তৈরি করা যেতে পারে।",
+      "You can create fun things with JavaScript.",
       "Practice makes perfect. Keep calm and code on!",
       "Learning to type quickly saves a lot of time."
     ];
@@ -177,3 +177,4 @@
 
     // Accessibility: allow focusing the input by clicking the text display
     textDisplay.addEventListener('click', () => input.focus());
+
