@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <a href="../index.html" class="custom-link">← Back</a>
+    <div class="container" role="main">
+    <header>
+      <h1>Typing Speed Test — JavaScript</h1>
+      <div class="controls">
+        <div class="stats">
+          <div>Time: <strong id="time">0s</strong></div>
+          <div>WPM: <strong id="wpm">0</strong></div>
+          <div>Accuracy: <strong id="acc">100%</strong></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div id="textDisplay" aria-live="polite"></div>
+    </div>
+
+    <div class="typing-area">
+      <textarea id="input" placeholder="টাইপ করতে এখানে শুরু কর... (পেস্ট নিষিদ্ধ)" aria-label="typing input"></textarea>
+
+      <div class="footer-row">
+        <div class="meta">
+          <div class="small">Characters: <span id="chars">0</span></div>
+          <div class="small">Mistakes: <span id="mistakes">0</span></div>
+        </div>
+
+        <div style="display:flex;gap:8px">
+          <button id="resetBtn">Reset</button>
+          <button id="newBtn">New Text</button>
+          <button id="startBtn" class="primary">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
