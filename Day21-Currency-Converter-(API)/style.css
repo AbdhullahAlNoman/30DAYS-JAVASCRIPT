@@ -57,7 +57,6 @@ h1 {
 
 .converter-box select {
   background: rgba(255, 255, 255, 0.15);
-  color: #fff;
   border: none;
   outline: none;
   cursor: pointer;
@@ -136,4 +135,5 @@ footer {
     background: linear-gradient(45deg, #2575fc, #6a11cb);
     box-shadow: 0 6px 20px rgba(38, 50, 56, 0.5);
     text-decoration: none;
+
   }
