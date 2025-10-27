@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Form Validator Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../index.html" class="custom-link">← Back</a>
+  <main class="container">
+    <h1>Registration Form</h1>
+
+    <form id="regForm" novalidate>
+      <div class="field">
+        <label for="name">Full name<span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required aria-describedby="nameHelp" />
+        <small id="nameHelp" class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="field">
+        <label for="email">Email<span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required aria-describedby="emailHelp" />
+        <small id="emailHelp" class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone (optional)</label>
+        <input type="tel" id="phone" name="phone" pattern="^\+?[0-9]{7,15}$" aria-describedby="phoneHelp" />
+        <small id="phoneHelp" class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="field">
+        <label for="password">Password<span aria-hidden="true">*</span></label>
+        <input type="password" id="password" name="password" required aria-describedby="passwordHelp" />
+        <small id="passwordHelp" class="error" aria-live="polite"></small>
+        <meter id="pwMeter" min="0" max="4" low="2" high="3" optimum="4" value="0"></meter>
+      </div>
+
+      <div class="field">
+        <label for="confirm">Confirm Password<span aria-hidden="true">*</span></label>
+        <input type="password" id="confirm" name="confirm" required aria-describedby="confirmHelp" />
+        <small id="confirmHelp" class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="field checkbox-field">
+        <input type="checkbox" id="terms" name="terms" />
+        <label for="terms">I agree to the terms and conditions<span aria-hidden="true">*</span></label>
+        <small id="termsHelp" class="error" aria-live="polite"></small>
+      </div>
+
+      <button id="submitBtn" type="submit" disabled>Register</button>
+      <div id="formMessage" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

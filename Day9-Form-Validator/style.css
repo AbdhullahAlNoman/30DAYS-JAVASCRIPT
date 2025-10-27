@@ -1,0 +1,144 @@
+:root{
+  --bg:#f6f8fa;
+  --card:#ffffff;
+  --accent:#2563eb;
+  --danger:#dc2626;
+  --muted:#6b7280;
+  --success:#16a34a;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  padding:32px;
+  background:linear-gradient(180deg,#eef2ff, var(--bg));
+  color:#111827;
+  min-height:100vh;
+}
+
+.container{
+  max-width:520px;
+  margin:0 auto;
+  background:var(--card);
+  padding:28px;
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(16,24,40,0.08);
+}
+
+h1{
+  margin:0 0 18px 0;
+  font-size:20px;
+}
+
+.field{
+  margin-bottom:14px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.field label{
+  font-weight:600;
+  font-size:14px;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="tel"],
+.field input[type="password"]{
+  padding:10px 12px;
+  border:1px solid #e6e9ee;
+  border-radius:8px;
+  font-size:14px;
+  outline:none;
+  transition:box-shadow .12s, border-color .12s;
+}
+
+.field input:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 4px rgba(37,99,235,0.08);
+}
+
+.error{
+  color:var(--danger);
+  font-size:13px;
+  min-height:18px;
+}
+
+input.valid{
+  border-color: #10b981;
+}
+
+input.invalid{
+  border-color: var(--danger);
+}
+
+.checkbox-field{
+  flex-direction:row;
+  align-items:center;
+  gap:8px;
+}
+
+button{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 14px;
+  font-size:15px;
+  border-radius:10px;
+  cursor:pointer;
+  width:100%;
+  margin-top:8px;
+}
+
+button:disabled{
+  opacity:0.5;
+  cursor:not-allowed;
+}
+
+meter{
+  width:100%;
+  height:8px;
+  margin-top:6px;
+  border-radius:6px;
+  appearance:none;
+}
+
+#formMessage{
+  margin-top:12px;
+  font-weight:600;
+}
+
+#formMessage.success{
+  color:var(--success);
+}
+
+#formMessage.error{
+  color:var(--danger);
+}
+
+/* small responsive tweak */
+@media (max-width:520px){
+  body{padding:16px}
+  .container{padding:18px}
+}
+.custom-link {
+    margin-right: auto;
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(38, 50, 56, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    font-family: Arial, sans-serif;
+  }
+
+  .custom-link:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    box-shadow: 0 6px 20px rgba(38, 50, 56, 0.5);
+    text-decoration: none;
+  }
