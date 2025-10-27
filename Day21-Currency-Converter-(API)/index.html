@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter (API)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+      <a href="../index.html" class="custom-link">← Back</a>
+    <h1>💱 Currency Converter</h1>
+
+    <div class="converter-box">
+      <input type="number" id="amount" placeholder="Enter amount" />
+
+      <div class="dropdowns">
+        <div class="select-box">
+          <img id="from-flag" src="" alt="flag" />
+          <select id="from"></select>
+        </div>
+
+        <span>➡️</span>
+
+        <div class="select-box">
+          <img id="to-flag" src="" alt="flag" />
+          <select id="to"></select>
+        </div>
+      </div>
+
+      <button id="convert-btn">Convert</button>
+
+      <div id="result" class="fade-in"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by <strong>Noman</strong></p>
+  </footer>
+    <script src="script.js"></script>
+</body>
+</html>
