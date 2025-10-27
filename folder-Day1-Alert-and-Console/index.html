@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Input → Alert & Console</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   <a href="/index.html" class="custom-link">← Back</a>
+  <main class="container">
+     
+    <h1>Input → Alert & Console</h1>
+
+    <div class="control">
+      <label for="message">Enter your message</label>
+      <input id="message" type="text" placeholder="Type here... (Press Enter to send)" />
+    </div>
+
+    <div class="buttons">
+      <button id="btnAlert">Show Alert</button>
+      <button id="btnBrowserLog">Log to Browser Console</button>
+      <button id="btnPageConsole">Add to Page Console</button>
+      <button id="btnClear" class="secondary">Clear Page Console</button>
+    </div>
+
+    <section class="console-wrap">
+      <div class="console-header">
+        <h2>Page Console</h2>
+        <small id="consoleCount">0 entries</small>
+      </div>
+      <div id="pageConsole" class="page-console" aria-live="polite"></div>
+    </section>
+
+    <footer class="note">
+      <p>Tip: Leave the input blank and you'll get a warning message.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
