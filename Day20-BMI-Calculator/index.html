@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="/index.html" class="custom-link">← Back</a>
+
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <div class="muted">Enter your weight and height — your BMI and health category will be shown.</div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="flex-between">
+          <div>
+            <label for="unit">Unit</label>
+            <select id="unit" aria-label="unit-select">
+              <option value="metric">Metric (kg, cm)</option>
+              <option value="metric-m">Metric (kg, m)</option>
+              <option value="imperial">Imperial (lbs, in)</option>
+            </select>
+          </div>
+          <div style="width:140px">
+            <label>&nbsp;</label>
+            <button id="calcBtn" style="width:100%">Calculate</button>
+          </div>
+        </div>
+
+        <div style="margin-top:10px">
+          <label for="weight">Weight</label>
+          <input id="weight" type="number" min="0" step="0.1" placeholder="e.g., 70 (kg) or 154 (lbs)" />
+        </div>
+
+        <div style="margin-top:10px">
+          <label for="height">Height</label>
+          <input id="height" type="number" min="0" step="0.01" placeholder="e.g., 175 (cm) or 1.75 (m) or 70 (in)" />
+        </div>
+
+        <div class="controls">
+          <button id="calcLive" class="secondary small">Live (auto)</button>
+          <button id="saveBtn" class="secondary small">Save to History</button>
+          <button id="clearInputs" class="secondary small">Clear</button>
+        </div>
+
+        <div class="result" id="resultBox" aria-live="polite">
+          <div class="row">
+            <div>
+              <div class="muted">Your BMI</div>
+              <div id="bmiValue" class="big">—</div>
+            </div>
+            <div style="text-align:right">
+              <div class="muted">Category</div>
+              <div id="bmiCat" class="cat">—</div>
+            </div>
+          </div>
+          <div class="advice" id="advice">Press Calculate or enable Live mode to see your results.</div>
+        </div>
+
+        <div style="margin-top:10px">
+          <div class="flex-between">
+            <div class="muted">History (session)</div>
+            <div>
+              <button id="downloadCSV" class="secondary small">Download CSV</button>
+              <button id="clearHistory" class="secondary small">Clear History</button>
+            </div>
+          </div>
+          <div id="historyWrap" style="margin-top:8px">
+            <table id="historyTable" aria-label="history-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Weight</th>
+                  <th>Height</th>
+                  <th>BMI</th>
+                  <th>Category</th>
+                </tr>
+              </thead>
+              <tbody id="historyBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="note">
+          WHO Standard: Underweight (BMI &lt; 18.5), Normal (18.5–24.9), Overweight (25–29.9), Obese (≥30).
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <strong>Quick Chart</strong>
+            <div class="muted" style="font-size:12px">BMI over saved entries</div>
+          </div>
+          <div id="statMini" class="muted">—</div>
+        </div>
+
+        <canvas
+          id="bmiChart"
+          width="600"
+          height="300"
+          style="width:100%;height:220px;margin-top:12px;border-radius:8px;background:linear-gradient(180deg,#fbfeff,#f7fbff)"
+        ></canvas>
+
+        <div style="margin-top:12px">
+          <div class="muted">Legend:</div>
+          <div style="display:flex;gap:8px;margin-top:6px">
+            <div class="pill">Under &lt;18.5</div>
+            <div class="pill">Normal 18.5–24.9</div>
+            <div class="pill">Over 25–29.9</div>
+            <div class="pill">Obese ≥30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
