@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Genaretor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <a href="../index.html" class="custom-link">← Back</a>
+<div class="container">
+    <div class="card">
+    <h1>Password Generator</h1>
+    <p>Flexible, challenge-ready password generator — copy, tweak, and embed anywhere.</p>
+
+    <label for="output">Generated password</label>
+    <div class="row" style="margin-bottom:8px">
+      <input id="output" type="text" readonly placeholder="Press Generate" />
+      <button id="copyBtn" class="secondary">Copy</button>
+    </div>
+
+    <label for="length">Length</label>
+    <div class="row">
+      <input id="length" type="number" min="4" max="128" value="16" />
+      <div style="flex:1">
+        <div class="checks">
+          <label><input id="lower" type="checkbox" checked /> lowercase</label>
+          <label><input id="upper" type="checkbox" checked /> UPPERCASE</label>
+          <label><input id="numbers" type="checkbox" checked /> numbers</label>
+          <label><input id="symbols" type="checkbox" checked /> symbols</label>
+          <label><input id="excludeAmb" type="checkbox" /> exclude ambiguous (O0Il1)</label>
+        </div>
+      </div>
+    </div>
+
+    <label>Options</label>
+    <div class="checks">
+      <label><input id="noRepeat" type="checkbox" /> no repeated characters</label>
+      <label><input id="pronounce" type="checkbox" /> pronounceable (letters + vowel handling)</label>
+    </div>
+
+    <div style="margin-top:12px" class="row">
+      <button id="generate">Generate</button>
+      <button id="exampleBtn" class="secondary">Example: 4 passwords</button>
+      <div style="flex:1"></div>
+      <div class="meta">
+        <div class="meter" title="strength"><i id="meterBar"></i></div>
+        <small id="strengthText">—</small>
+      </div>
+    </div>
+
+    <footer>
+      <small>Tip: for high entropy use length ≥ 16 and allow numbers + symbols.</small>
+    </footer>
+  </div>
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
