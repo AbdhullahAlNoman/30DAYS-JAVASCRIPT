@@ -1,19 +1,19 @@
     const QUESTIONS = [
       {
         id: 1,
-        q: "বাংলাদেশের রাজধানী কোথায়?",
-        choices: ["চট্টগ্রাম","ঢাকা","রাজশাহী","খুলনা"],
+        q: "Where is the capital of Bangladesh??",
+        choices: ["Dhaka","Khulna","Barisal","Rajshahi"],
         answer: 1 // index (0-based)
       },
       {
         id: 2,
-        q: "HTML মানে কি?",
+        q: "What does Html mean?",
         choices: ["Hyper Text Markup Language","Home Tool Markup Language","Hyperlinks Text Markup Level","HighText Markup Language"],
         answer: 0
       },
       {
         id: 3,
-        q: "JavaScript কে ব্রাউজারে চালায় কে?",
+        q: "Who runs JavaScript in the browser?",
         choices: ["Interpreter","Compiler","Both","None"],
         answer: 0
       },
@@ -176,7 +176,7 @@
 
     submitBtn.addEventListener('click', submitQuiz);
     resetBtn.addEventListener('click', () => {
-      if (confirm(' আবার শুরু করো?')) init();
+      if (confirm(' Start again?')) init();
     });
     tryAgainBtn.addEventListener('click', init);
 
@@ -186,9 +186,9 @@
       // show result
       questionArea.classList.add('hidden');
       resultArea.classList.remove('hidden');
-      resultTitle.textContent = `তোমার স্কোর: ${state.score} / ${state.questions.length};
+      resultTitle.textContent = `score: ${state.score} / ${state.questions.length};
       const pct = Math.round((state.score / state.questions.length) * 100)`;
-      resultDetails.innerHTML = `সঠিক: ${state.score} &nbsp; | &nbsp; মোট: ${state.questions.length} &nbsp; | &nbsp; শতাংশ: ${pct}%;
+      resultDetails.innerHTML = `Correct: ${state.score} &nbsp; | &nbsp; Tota: ${state.questions.length} &nbsp; | &nbsp; Percentage: ${pct}%;
       stopTimer()`;
     }
 
@@ -250,7 +250,7 @@
         const raw = localStorage.getItem('quiz_save_v1');
         if (!raw) return;
         const parsed = JSON.parse(raw);
-        if (confirm('পূর্ববর্তী সেভ পাওয়া গেছে — রিস্টোর করবেন?')) {
+        if (confirm('Previous save found — restore?')) {
           // overwrite QUESTIONS with saved state (simple restore)
           state.questions = parsed.questions || state.questions;
           state.userAnswers = parsed.userAnswers || {};
@@ -265,3 +265,4 @@
         console.warn('restore failed', e);
       }
     })();
+
