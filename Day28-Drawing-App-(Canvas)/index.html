@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing App (Canvas)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<a href="/index.html" class="custom-link">← Back</a>
+  <div class="app">
+    <header class="toolbar">
+      <div class="controls">
+        <label>
+          Color
+          <input id="colorPicker" type="color" value="#000000">
+        </label>
+        <label>
+          Brush
+          <input id="size" type="range" min="1" max="60" value="6">
+        </label>
+        <button id="eraser">Eraser</button>
+        <button id="clear">Clear</button>
+        <button id="undo">Undo</button>
+        <button id="save">Save PNG</button>
+      </div>
+      <div class="title">Drawing App</div>
+    </header>
+
+    <main class="canvas-wrap">
+      <canvas id="draw"></canvas>
+    </main>
+
+    <footer class="hint">Pointer / Touch support • Use the color picker and brush size • Eraser toggles</footer>
+  </div>
+
+  
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
